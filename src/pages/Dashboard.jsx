@@ -10,14 +10,43 @@ const dummyPlayers = [
 export default function Dashboard() {
   return (
     <div className="dashboard-container">
-      <h2>Player List</h2>
-      <ul>
-        {dummyPlayers.map((player) => (
-          <li key={player.id} className="player-card">
-            {player.name} - {player.team} - Rs.{player.price}
-          </li>
-        ))}
-      </ul>
+      {/* Left Sidebar */}
+      <div className="sidebar">
+        <div className="profile-image"></div>
+        <h3>Team</h3>
+        <p>Lores Ipsum</p>
+        <h3>Something</h3>
+        <p>Lores Ipsum</p>
+      </div>
+
+      {/* Main Content */}
+      <div className="main-content">
+        <h2>Manage Your Team</h2>
+
+        {/* Top Player Selection */}
+        <div className="top-players">
+          <div className="player-slot"></div>
+          <div className="player-slot"></div>
+          <div className="player-slot"></div>
+          <div className="player-slot"></div>
+          <div className="player-slot"></div>
+        </div>
+
+        {/* Player List */}
+        <div className="player-list">
+          {dummyPlayers.map((player) => (
+            <div key={player.id} className="player-card">
+              <div className="player-image"></div>
+              <p>{player.name}</p>
+              <p>{player.team}</p>
+              <p>Rs.{player.price}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Right Sidebar */}
+      <div className="right-sidebar"></div>
     </div>
   );
 }

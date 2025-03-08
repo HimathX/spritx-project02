@@ -1,0 +1,70 @@
+/* General Footer Styles */
+.footer-container {
+  background-color: #000000;
+  color: #fff;
+  padding: 10px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;  /* Center all the content horizontally */
+  justify-content: space-between;
+  width: 100%;
+  font-size: 14px; /* Smaller font size */
+  position: relative;
+  bottom: 0;
+  margin-top: 100px;
+  border-top: 2px solid #fff; 
+}
+
+/* Footer Subscription Section */
+.footer-subscription {
+  width: 100%;
+  text-align: center;
+  padding: 10px 0;
+  background-color: #000000;
+}
+
+.footer-subscription-heading {
+  font-size: 18px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+
+.footer-logo {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 10px;
+  bottom: 10px;
+}
+
+.social-logo {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+}
+
+.social-logo i {
+  margin-left: 5px;
+  font-size: 18px;
+}
+
+/* Footer Rights Section (Reserved Text) - Centered */
+.website-rights {
+  text-align: center;
+  font-size: 12px;
+  color: #ccc;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Responsive Design - Mobile View */
+@media screen and (max-width: 768px) {
+  .footer-links {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px; /* Reduced gap on mobile */
+  }
+
+}

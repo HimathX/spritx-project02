@@ -5,6 +5,7 @@ import Dashboard from "./pages/Dashboard";
 import TeamManagement from "./pages/TeamManagement"; 
 import Navbar from './components/Navbar.jsx';
 import './App.css';
+import Footer from './components/Footer.jsx';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
         <Route path='/dashboard' element={<Dashboard/>}/>
         <Route path='/team' element={<TeamManagement/>}/>
       </Routes>
+      <Footer></Footer>
 
     </Router>
   )

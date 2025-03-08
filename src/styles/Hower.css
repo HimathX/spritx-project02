@@ -1,0 +1,71 @@
+/* Container */
+.hover-container {
+  display: inline-block;
+  position: relative;
+  margin: 10px;
+}
+
+/* Player Name */
+.player-name {
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: color 0.3s ease;
+}
+
+.player-name:hover {
+  color: #00ff99;
+}
+
+/* Stat Card */
+.stat-card {
+  position: absolute;
+  top: 30px;
+  left: 0;
+  width: 180px;
+  background-color: #222;
+  color: #fff;
+  padding: 12px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 10px rgba(255, 255, 255, 0.2);
+  z-index: 10;
+  opacity: 0;
+  animation: fadeIn 0.3s forwards;
+}
+
+/* Fade-in effect */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Profile Image */
+.profile-img {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  margin-bottom: 10px;
+  border: 2px solid #00ff99;
+}
+
+/* Text Styling */
+.stat-card h3 {
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.stat-card p {
+  font-size: 14px;
+  margin: 3px 0;
+  color: #bbb;
+}

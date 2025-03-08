@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "../styles/TeamManagement.css"; // Import CSS file
+import Hower from '../components/Hower.jsx'
 
 const dummyPlayers = [
   { id: 1, name: "John Silva", team: "University A", price: 1200000 },
   { id: 2, name: "Arjun Perera", team: "University B", price: 900000 },
   { id: 3, name: "Ravi Fernando", team: "University C", price: 1500000 },
   { id: 4, name: "Sahan Jayasuriya", team: "University D", price: 1100000 },
+  {id: 5, name: "Nadun Sasanga", team: "University E", price: 1350000},
 ];
 
 export default function TeamManagement() {
@@ -41,7 +43,7 @@ export default function TeamManagement() {
       <h3>Your Team:</h3>
       <ul>
         {team.map((player) => (
-          <li key={player.id} className="team-player">{player.name}</li>
+          <li key={player.id} className="team-player"><Hower player={player}/></li>
         ))}
       </ul>
     </div>
