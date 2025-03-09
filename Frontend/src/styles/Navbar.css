@@ -6,19 +6,29 @@
     border-bottom: 2px solid #222;
   }
   
-
-.navbar a {
+  .navbar a {
     text-decoration: none;
     color: #fff;
     margin: 0 15px;
     font-size: 16px;
+    padding: 8px 20px;  /* Space inside the link */
+    position: relative;  /* Needed for positioning the oval */
     transition: color 0.3s;
-}
+  }
   
-.navbar a:hover {
+  .navbar a:hover {
     color: #3a10d4;
-}
+  }
   
-.navbar .nav-links{
-    margin-top:25px;
-}
+  /* Oval highlight for active link */
+  .navbar .active {
+    color: #000;  /* Text color when active */
+    background-color: white;  /* Background of the active link */
+    border-radius: 20px;  /* Oval shape */
+    padding: 8px 20px;  /* Maintain padding to ensure it's oval */
+  }
+  
+  .navbar .nav-links {
+    margin-top: 25px;
+  }
+  

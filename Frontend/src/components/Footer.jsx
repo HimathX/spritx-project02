@@ -5,20 +5,17 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <div className='footer-container'> 
-      <section></section>
-      <section className='footer-subscription'>
-        <p className='footer-subscription-heading'>
-          Join for the  The Gentlemans Game
-        </p>
-      </section>
-          <div class='footer-logo'>
-            <Link to='/' className='social-logo'>
-              Spirit11
-              <i class='fas fa-ball' />
-            </Link>
-          </div>
-          <small class='website-rights'>Pixel Pushers © 2025</small>
-        </div>
+      <div className='footer-logo'>
+        <Link to='/' className='social-logo'>
+          Spirit11
+        </Link>
+      </div>
+      <h1 className='footer-subscription-heading'>
+        Join The Gentleman's Game
+      </h1>
+      <small className='website-rights'>Pixel Pushers © 2025</small>
+      <h1 className='moraspirit'>Mora spirit</h1> 
+    </div>
   );
 }
 
