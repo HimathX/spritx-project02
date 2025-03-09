@@ -11,7 +11,6 @@
   font-size: 14px; /* Smaller font size */
   position: relative;
   bottom: 0;
-  margin-top: 100px;
   border-top: 2px solid #fff; 
 }
 
@@ -19,14 +18,13 @@
 .footer-subscription {
   width: 100%;
   text-align: center;
-  padding: 10px 0;
   background-color: #000000;
 }
 
 .footer-subscription-heading {
   font-size: 18px;
   font-weight: bold;
-  margin-bottom: 10px;
+  
 }
 
 
@@ -43,6 +41,8 @@
   font-weight: bold;
   color: #fff;
   text-decoration: none;
+  margin-left: 5px;
+
 }
 
 .social-logo i {
@@ -50,9 +50,24 @@
   font-size: 18px;
 }
 
+.moraspirit {
+  font-size: 20px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  right: 10px;
+  bottom: 5px;
+  margin-right: 5px;
+}
+
+
 /* Footer Rights Section (Reserved Text) - Centered */
 .website-rights {
   text-align: center;
+  margin-right: 20px;
   font-size: 12px;
   color: #ccc;
   width: 100%;

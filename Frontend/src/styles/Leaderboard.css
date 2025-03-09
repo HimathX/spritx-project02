@@ -1,0 +1,114 @@
+.leaderboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    background-color: #111;
+    padding: 20px;
+    min-height: 100vh;
+}
+
+.left-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    margin-bottom: 20px;
+    color: white;
+    width: 60%;
+}
+
+.trophy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.trophy-image {
+    width: 150px;
+    height: auto;
+}
+
+.description-text {
+    font-size: 14px;
+    color: #bbb;
+    max-width: 500px;
+    line-height: 1.5;
+}
+
+/* Leaderboard Styling */
+.leaderboard {
+    width: 60%;
+    background-color: #222;
+    padding: 15px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+.leaderboard-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin: 6px 0;
+    transition: transform 0.2s;
+    background-color: #222; /* Default background */
+    color: white;
+}
+
+.leaderboard-item:hover {
+    transform: scale(1.03);
+}
+
+/* Player Name */
+.leaderboard-item .player-name {
+    flex-grow: 1;
+    font-weight: bold;
+}
+
+/* Player Points */
+.leaderboard-item .player-points {
+    color: #ffffff;
+    font-size: 14px;
+}
+
+/* Player Rank */
+.leaderboard-item .player-rank {
+    font-weight: bold;
+    color: white;
+}
+
+/* Top 3 Players' Colors */
+.leaderboard-item:nth-child(1) {
+    background-color: gold !important;
+    color: black;
+}
+
+.leaderboard-item:nth-child(2) {
+    background-color: silver !important;
+    color: black;
+}
+
+.leaderboard-item:nth-child(3) {
+    background-color: #cd7f32 !important; /* Bronze */
+    color: black;
+}
+
+/* User Highlight */
+.leaderboard-item.highlight {
+    background-color: #444 !important;
+    border: 2px solid #fff;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .leaderboard {
+        width: 90%;
+    }
+
+    .left-section {
+        width: 90%;
+    }
+}

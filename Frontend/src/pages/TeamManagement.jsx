@@ -42,6 +42,11 @@ export default function TeamManagement() {
     }
   };
 
+  const removeFromTeam = (player) => {
+    setTeam(team.filter((p) => p.id !== player.id));
+    setBudget(budget + player.price);
+  };
+
   return (
     <div className="team-container">
       <h2>Manage Your Team</h2>
@@ -63,11 +68,20 @@ export default function TeamManagement() {
       </ul>
 
       <h3>Your Team:</h3>
-      <ul>
-        {team.map((player, index) => (
-          <li key={player.id || index} className="team-player"><Hower player={player}/></li> 
-        ))}
-      </ul>
+
+      <ul className="team-list">
+              {team.length > 0 ? (
+                team.map((player) => (
+                  <li key={player.id} className="team-player">
+                    <Hower player={player} />
+                    <button className="remove-btn" onClick={() => removeFromTeam(player)}>Remove</button>
+                  </li>
+                ))
+              ) : (
+                <p>No players selected.</p>
+              )}
+            </ul>
+
     </div>
   );
 }
