@@ -1,0 +1,22 @@
+{
+  "name": "spritx-project02",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/HimathX/spritx-project02.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/HimathX/spritx-project02/issues"
+  },
+  "homepage": "https://github.com/HimathX/spritx-project02#readme",
+  "description": ""
+}
