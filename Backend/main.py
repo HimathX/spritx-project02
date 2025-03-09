@@ -35,7 +35,6 @@ def signup(data: SignupRequest):
     doc["password"] = str(pwd_context.hash(doc["password"]))
     
     # Insert data into MongoDB
-    user_collection.insert_one(doc)
     
     return {"message": "Signup successful! Redirecting to login..."}
 
