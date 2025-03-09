@@ -1,20 +1,44 @@
+import { useEffect, useState } from 'react';
+import axios from 'axios';
 import "../styles/Dashboard.css"; // Import CSS file
 
-const dummyPlayers = [
-  { id: 1, name: "John Silva", team: "University A", price: 1200000 },
-  { id: 2, name: "Arjun Perera", team: "University B", price: 900000 },
-  { id: 3, name: "Ravi Fernando", team: "University C", price: 1500000 },
-  { id: 4, name: "Sahan Jayasuriya", team: "University D", price: 1100000 },
-];
+const api = axios.create({
+  baseURL: 'http://127.0.0.1:8093',  // Updated to match your FastAPI port
+});
 
 export default function Dashboard() {
+  const [players, setPlayers] = useState([]);
+  const [username, setUsername] = useState(null);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Fetch username from local storage or context
+    const storedUsername = localStorage.getItem('username');
+    if (storedUsername) {
+      setUsername(storedUsername);
+    }
+
+    const fetchPlayers = async () => {
+      try {
+        const response = await api.get('/players');
+        setPlayers(response.data.players);
+      } catch (error) {
+        console.error('Error fetching players', error);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    fetchPlayers();
+  }, []);
+
   return (
     <div className="dashboard-container">
       {/* Left Sidebar */}
       <div className="sidebar">
         <div className="profile-image"></div>
         <h3>Team</h3>
-        <p>Lores Ipsum</p>
+        <p>{username ? `Hello, ${username}` : 'Loading session...'}</p>
         <h3>Something</h3>
         <p>Lores Ipsum</p>
       </div>
@@ -25,23 +49,26 @@ export default function Dashboard() {
 
         {/* Top Player Selection */}
         <div className="top-players">
-          <div className="player-slot"></div>
-          <div className="player-slot"></div>
-          <div className="player-slot"></div>
-          <div className="player-slot"></div>
-          <div className="player-slot"></div>
+          {Array.from({ length: 5 }).map((_, index) => (
+            <div key={index} className="player-slot"></div>
+          ))}
         </div>
 
         {/* Player List */}
         <div className="player-list">
-          {dummyPlayers.map((player) => (
-            <div key={player.id} className="player-card">
-              <div className="player-image"></div>
-              <p>{player.name}</p>
-              <p>{player.team}</p>
-              <p>Rs.{player.price}</p>
-            </div>
-          ))}
+          {loading ? (
+            <p>Loading players...</p>
+          ) : (
+            players.map((player) => (
+              <div key={player.id} className="player-card">
+                <div className="player-image"></div>
+                <p>{player.name}</p>
+                <p>{player.university}</p>
+                <p>Runs: {player.total_runs}</p>
+                <p>Wickets: {player.wickets}</p>
+              </div>
+            ))
+          )}
         </div>
       </div>
 
