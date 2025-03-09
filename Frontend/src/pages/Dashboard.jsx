@@ -41,6 +41,7 @@ const Players = () => {
       </div>
     </div>
   );
+
 };
 
 export default Players;
