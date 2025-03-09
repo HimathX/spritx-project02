@@ -28,8 +28,7 @@ const Leaderboard = () => {
           <img src={trophy} alt="Trophy" className="trophy-image" />
         </div>
         <p className="description-text">
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua.
+        Rise through the ranks on the Cricket Select Team Leaderboard! Compete with other teams, track your team’s position, and see how your players stack up against the best. Keep pushing to lead the pack and dominate the competition!
         </p>
       </div>
       <div className="leaderboard">
